@@ -1,0 +1,86 @@
+
+<!-- <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Name</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Release Date</label>
+        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+      </div>
+    </div> 
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">Domestic</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="form-group col-md-3">
+        <label for="inputCity">International</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      
+      <div class="form-group col-md-3">
+        <label for="inputZip">WorldWide</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form>
+
+   -->
+
+
+<div class="container">
+    <h3 class="text-center" style="margin-top:30px">Movie:  {{movies.name}}</h3>
+
+    <br>
+    <form class="row g-3">
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label"  >Name</label>
+
+            <input type="text" class="form-control" placeholder="name" name="name" [(ngModel)]="movies.name">
+        </div>
+        <div class="col-md-6">
+            <label for="inputPassword4" class="form-label" >Release Date</label>
+            <input type="date" class="form-control" placeholder="25-12-2021"  name="date"[(ngModel)]="movies.date">
+        </div>
+        <div class="col-md-4">
+            <label for="inputCity" class="form-label">Domestic</label>
+            <input type="text" class="form-control" placeholder="$785752" name="domestic"  data-type="currency" [(ngModel)]="movies.domestic">
+        </div>
+        <div class="col-md-4">
+            <label for="inputCity" class="form-label" >International</label>
+            <input type="text" class="form-control" placeholder="$785272" data-type="currency" name="international"[(ngModel)]="movies.international">
+        </div>
+        <div class="col-md-4">
+            <label for="inputZip" class="form-label" >World Wide</label>
+            <input type="text" class="form-control" placeholder="$3699.258"  name="wide" [(ngModel)]="movies.wide" data-type="currency">
+        </div>
+      
+        <div>
+            <div class="btn-group  mx-auto"  aria-label="Basic example">
+                <div>
+                    <button type="button" style="margin: 10px ;margin-left:420px"
+                    class="btn btn-primary" (click)="create()">Create</button>
+
+                </div>
+                <div>
+                    <button type="button"  style="margin: 10px "
+                    class="btn btn-primary" (click)="update()">update</button>
+                    
+                </div>
+                <div>
+                    <button type="button"  style="margin: 10px "
+                    class="btn btn-primary" (click)="delete()">delete</button>
+
+                </div>
+              
+                    
+                </div>
+
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,61 @@
+
+<div class="container">
+    <h3 class="text-center" style="margin-top:30px" >Movie: {{movieForm.controls.name.value}} </h3>
+
+    <br>
+<form class="row g-3" [formGroup]="movieForm" (ngSubmit)="create()">
+    <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Name</label>
+
+        <input type="text" class="form-control" placeholder="name"
+            formControlName="name">
+    </div>
+    <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Release Date</label>
+        <input type="date" class="form-control" placeholder="25-12-2021"
+            formControlName="date">
+    </div>
+
+    <div class="col-md-4">
+        <label for="inputCity" class="form-label">Domestic</label>
+        <input type="text" class="form-control" placeholder="$785752" data-type="currency"
+         formControlName="domestic">
+    </div>
+
+
+    <div class=" col-md-4">
+        <label for="inputCity" class="form-label">International</label>
+        <input type="text" class="form-control" placeholder="$785272" data-type="currency"
+         formControlName="international">
+    </div>
+    <div class="col-md-4">
+        <label for="inputZip" class="form-label">World Wide</label>
+        <input type="text" class="form-control" placeholder="$3699.258"
+            data-type="currency" formControlName="wide">
+    </div>
+
+    <div>
+        <div class="btn-group  mx-auto" aria-label="Basic example">
+            <div>
+                <button type="submit" style="margin: 10px ;margin-left:420px" class="btn btn-primary"
+                    >Create</button>
+
+            </div>
+            <!-- <div>
+                <button type="button"  style="margin: 10px "
+                class="btn btn-primary" (click)="update()">update</button>
+                
+            </div>
+            <div>
+                <button type="button"  style="margin: 10px "
+                class="btn btn-primary" (click)="delete()">delete</button>
+
+            </div> -->
+
+
+        </div>
+
+    </div>
+
+</form>
+</div>
